@@ -1,95 +1,74 @@
-# Restaurant Management App
+# 🍽️ Smart Restaurant Manager
 
-A complete Android application built with Kotlin and Jetpack Compose for restaurant order management and sales tracking.
+![Kotlin](https://img.shields.io/badge/Kotlin-1.9.10-blue?logo=kotlin)
+![Jetpack Compose](https://img.shields.io/badge/Jetpack%20Compose-UI-orange)
+![Room](https://img.shields.io/badge/Room-Database-yellow)
+![Android](https://img.shields.io/badge/Android-12%2B-green?logo=android)
 
-## ✨ **NEW FEATURES IMPLEMENTED**
+A modern Android application built using **Kotlin**, **Jetpack Compose**, **Room**, and **Hilt** for complete restaurant order and sales management.
 
-### 🖼️ **Image Support**
-- **Camera Integration**: Capture photos directly for menu items
-- **Gallery Selection**: Choose images from device gallery
-- **Image Display**: Real image components for menu items
-- **Local Storage**: Images stored securely on device
+---
 
-### 📊 **Real Charts & Analytics**
-- **MPAndroidChart Integration**: Professional chart library
-- **Interactive Sales Charts**: Touch, zoom, and pan functionality
-- **Real-time Data**: Live updates from database
-- **Multiple Chart Types**: Line charts for sales and profit trends
+## 🚀 Overview
 
-### 🪑 **Table Management System**
-- **Floor Plan View**: Visual table layout management
-- **Status Tracking**: Available, Occupied, Reserved, Cleaning
-- **Location Filtering**: Main Hall, Patio, VIP, Private Room
-- **Real-time Updates**: Live table status synchronization
-- **Add/Edit Tables**: Dynamic table management
+**Smart Restaurant Manager** is a feature-rich Android app designed to streamline restaurant operations — from table management to order handling and analytics visualization.  
+Built with Kotlin, Jetpack Compose, and Room Database, it ensures a **smooth, responsive, and modern experience**.
 
-### 🍽️ **Order Modifications**
-- **Special Requests**: Custom instructions for kitchen
-- **Common Modifications**: Quick-select options (No onions, Extra sauce, etc.)
-- **Visual Indicators**: Color-coded modification displays
-- **Order History**: Track all modifications per item
+---
 
-### 🌍 **Multi-language Support**
-- **3 Languages**: English, Spanish, French
-- **Dynamic Switching**: Change language without app restart
-- **Complete Translation**: All UI elements translated
-- **Language Persistence**: Remembers user preference
+## ✨ New Features Implemented
 
-## 🚀 **Enhanced Features**
+### 🖼️ Image Support
+- 📸 **Camera Integration** – Capture photos for menu items  
+- 🖼️ **Gallery Selection** – Choose images directly from the device  
+- 🗂️ **Local Storage** – Images securely stored on-device  
+- 🧩 **Image Display** – Real image components for menu and orders  
 
-### **Authentication System**
-- **Sign-In Screen**: User registration with validation
-- **Login Screen**: Secure authentication
-- **Local Database**: User data stored locally using Room database
-- **Error Handling**: Comprehensive validation and error messages
+### 📊 Real Charts & Analytics
+- 📈 **MPAndroidChart Integration** – Professional analytics library  
+- 📊 **Interactive Charts** – Touch, zoom, and pan enabled  
+- 🔁 **Live Data Updates** – Real-time sales tracking  
+- 📅 **Multiple Chart Types** – Sales, profits, and trends  
 
-### **Dashboard Analytics**
-- **Real Charts**: Interactive sales visualization with MPAndroidChart
-- **Time Period Filters**: 1D, This Week, 1M, 1Y views
-- **Summary Cards**: Total profit, average sales, food sales, beverage sales
-- **Real-time Data**: Live updates from local database
+### 🪑 Table Management System
+- 🗺️ **Floor Plan View** – Visual layout of restaurant tables  
+- 🔄 **Status Tracking** – Available, Occupied, Reserved, Cleaning  
+- 🏷️ **Location Filtering** – Main Hall, Patio, VIP, Private Room  
+- ➕ **Add/Edit Tables** – Dynamic table creation and modification  
 
-### **Order Management**
-- **Order List Screen**: 
-  - View all orders with status indicators
-  - Menu item selection by category (Food/Beverage)
-  - **Real Images**: Actual photos for menu items
-  - Add items to cart with real-time total calculation
-  - Process transactions
+### 🍽️ Order Modifications
+- 🧾 **Custom Requests** – Special kitchen instructions  
+- 🪄 **Quick Modifications** – Add “No onions”, “Extra sauce”, etc.  
+- 🎨 **Visual Indicators** – Color-coded modification states  
+- 📜 **Order History** – Track changes per item  
 
-- **Order Detail Screen**:
-  - Customer information input
-  - Order type selection (Dine In/Take Away)
-  - **Order Modifications**: Special requests and customizations
-  - Item quantity management with visual indicators
-  - Order summary with tax calculation
-  - Payment processing
+### 🌍 Multi-Language Support
+- 🌐 **3 Languages** – English, Spanish, French  
+- 🔁 **Dynamic Switching** – No restart needed  
+- 💾 **Language Persistence** – Remembers last used language  
 
-### **Table Management**
-- **Visual Floor Plan**: Interactive table layout
-- **Status Management**: Real-time table status updates
-- **Location Organization**: Multiple restaurant areas
-- **Capacity Tracking**: Seat count per table
-- **Quick Actions**: One-tap status changes
+---
 
-## 🛠️ **Technical Implementation**
+## 🛠️ Technical Implementation
 
-### **Architecture**
-- **MVVM Pattern**: Clean separation of concerns
-- **Jetpack Compose**: Modern UI toolkit
-- **Room Database**: Local data persistence with version 2
-- **Hilt**: Dependency injection
-- **Navigation Compose**: Screen navigation
+### 🧩 Architecture
+- 🧠 **MVVM Pattern** – Clean separation of logic and UI  
+- 🧱 **Room Database v2** – Offline-first data management  
+- 🧭 **Navigation Compose** – Declarative navigation  
+- 🧩 **Hilt Dependency Injection** – Efficient DI  
+- 🎨 **Material Design 3** – Modern and consistent UI  
 
-### **Database Schema (Enhanced)**
-- **Users**: Authentication and user management
-- **RestaurantTable**: Table management with positioning
-- **Menu Items**: Food and beverage catalog with image support
-- **Orders**: Order tracking and management
-- **Order Items**: Individual order line items with modifications
-- **Sales Data**: Historical sales analytics
+### 🗄️ Database Schema
+| Entity | Description |
+|--------|--------------|
+| **Users** | Authentication and user data |
+| **RestaurantTable** | Table layout and seat info |
+| **MenuItems** | Food and beverage data with images |
+| **Orders** | Complete order tracking |
+| **OrderItems** | Items within each order |
+| **SalesData** | Analytics and historical sales |
 
-### **New Dependencies**
+### 🧰 Dependencies
 ```kotlin
 // Image handling
 implementation("io.coil-kt:coil-compose:2.5.0")
@@ -102,147 +81,104 @@ implementation("androidx.camera:camera-view:1.3.1")
 
 // Charts
 implementation("com.github.PhilJay:MPAndroidChart:v3.1.0")
-```
 
-### **Key Components**
-- **Repository Pattern**: Data access abstraction
-- **ViewModels**: Business logic and state management
-- **Compose UI**: Reactive UI components with real images
-- **Material Design 3**: Modern design system
-- **Image Components**: Custom image display and picker
-- **Chart Components**: Interactive data visualization
-- **Language Manager**: Multi-language support system
+📱 App Walkthrough
+1️⃣ Authentication System
 
-## 📱 **App Features Walkthrough**
+Sign-up and login with validation
 
-### **1. Enhanced Authentication Flow**
-- Start with Login screen
-- Create new account via Sign-In
-- Secure authentication with local validation
-- **Multi-language support** throughout
+Local user storage via Room
 
-### **2. Advanced Dashboard Analytics**
-- **Real interactive charts** with MPAndroidChart
-- Filter data by time periods
-- Monitor key performance indicators
-- **Touch and zoom** chart functionality
+Error handling and toast feedback
 
-### **3. Comprehensive Order Management**
-- Browse menu items by category with **real images**
-- Add items to cart with quantity selection
-- **Order modifications** and special requests
-- Process orders with customer details
-- Track order status and completion
+2️⃣ Dashboard & Analytics
 
-### **4. Table Management System**
-- **Visual floor plan** with table status
-- **Real-time status updates** (Available/Occupied/Reserved/Cleaning)
-- **Location-based filtering** (Main Hall, Patio, VIP, Private Room)
-- **Add new tables** dynamically
-- **One-tap status changes**
+Real-time interactive charts
 
-### **5. Multi-language Experience**
-- **3 Languages**: English, Spanish, French
-- **Dynamic language switching** without restart
-- **Complete UI translation**
-- **Persistent language preference**
+Daily / Weekly / Monthly / Yearly filters
 
-### **6. Data Persistence**
-- All data stored locally using Room database
-- **Image storage** for menu items
-- No external API dependencies
-- Offline functionality
+Summary cards for profits, sales, and averages
 
-## 🎯 **New Screens Added**
+3️⃣ Order Management
 
-1. **TableManagementScreen**: Complete table management interface
-2. **LanguageSelectionScreen**: Multi-language selection
-3. **Enhanced OrderDetailScreen**: With modification support
-4. **Enhanced OrderListScreen**: With real images and navigation
+Menu browsing by category (Food/Beverages)
 
-## 🔧 **Setup Instructions**
+Add to cart with live total
 
-### **Prerequisites**
-- Android Studio Hedgehog (2023.1.1) or later
-- Android SDK API Level 24+ (Android 7.0)
-- Kotlin 1.9.10+
+Manage quantities and special requests
 
-### **Installation Steps**
+Order summary + tax + payment screen
 
-1. **Clone the Repository**
-   ```bash
-   git clone <repository-url>
-   cd restaurant-app
-   ```
+4️⃣ Table Management
 
-2. **Open in Android Studio**
-   - Launch Android Studio
-   - Select "Open an existing project"
-   - Navigate to the project folder and select it
+Visual floor layout
 
-3. **Sync Project**
-   - Android Studio will automatically sync Gradle files
-   - Wait for the sync to complete
+Real-time status update (Available / Reserved / Cleaning)
 
-4. **Run the App**
-   - Connect an Android device or start an emulator
-   - Click the "Run" button or press Shift+F10
-   - The app will install and launch automatically
+Add new tables dynamically
 
-### **First Run**
-1. **Create Account**: Use the Sign-In screen to create a new account
-2. **Login**: Use your credentials to access the app
-3. **Explore**: Navigate through all screens to see the functionality
-4. **Try New Features**:
-   - Add images to menu items
-   - Interact with real charts
-   - Manage tables
-   - Add order modifications
-   - Switch languages
+Quick actions for table updates
 
-## 📊 **Performance & Features**
+5️⃣ Multi-Language System
 
-### **Enhanced Capabilities**
-- **Real Image Support**: Camera and gallery integration
-- **Interactive Charts**: Professional data visualization
-- **Table Management**: Complete floor plan system
-- **Order Customization**: Special requests and modifications
-- **Multi-language**: 3 languages with dynamic switching
-- **Offline Functionality**: Complete local data storage
+Instant switching between English, Spanish, French
 
-### **User Experience**
-- **Modern UI**: Material Design 3 with real images
-- **Intuitive Navigation**: Easy access to all features
-- **Real-time Updates**: Live data synchronization
-- **Professional Charts**: Interactive sales analytics
-- **Visual Table Management**: Floor plan with status indicators
+Translated UI and strings
 
-## 🚀 **Future Enhancements**
+Language preference persistence
 
-### **Potential Additions**
-- **Cloud Integration**: Firebase sync for multi-device
-- **Payment Processing**: Real payment gateways
-- **Customer App**: Separate customer-facing application
-- **Inventory Management**: Stock tracking and alerts
-- **Staff Management**: Role-based access control
-- **Advanced Analytics**: AI-powered insights
-- **QR Code Integration**: Contactless ordering
+🧠 Key Strengths
 
----
+✅ Real image integration (Camera + Gallery)
+✅ MPAndroidChart-powered analytics
+✅ Floor-plan based table management
+✅ Order modifications and history
+✅ Multi-language adaptability
+✅ Secure local authentication
+✅ 100% Offline functionality
 
-## 📋 **Summary**
+⚙️ Setup & Installation
+Prerequisites
 
-The Restaurant Management App now includes:
+Android Studio Hedgehog (2023.1.1) or higher
 
-✅ **Complete Authentication System**  
-✅ **Real Image Support** with camera/gallery  
-✅ **Interactive Charts** with MPAndroidChart  
-✅ **Table Management System** with floor plan  
-✅ **Order Modifications** and special requests  
-✅ **Multi-language Support** (English, Spanish, French)  
-✅ **Enhanced UI/UX** with Material Design 3  
-✅ **Local Database** with Room (Version 2)  
-✅ **Offline Functionality**  
-✅ **Professional Features** ready for production  
+Kotlin 1.9.10+
 
-**The app is now significantly more powerful and feature-rich, ready for real-world restaurant management!** 🎉
+Android SDK API 24+ (Android 7.0)
+
+Steps
+# Clone the repository
+git clone https://github.com/shaik-mohammad-parvez/Smart-Restaurant-Manager.git
+
+# Open in Android Studio
+# Sync Gradle and build project
+
+# Run on emulator or physical device
+
+🔮 Future Enhancements
+
+☁️ Firebase cloud sync
+
+💳 Real payment integration
+
+🧾 Inventory & staff management
+
+🤖 AI-powered analytics
+
+📱 Customer-facing app
+
+🔢 QR code table ordering
+
+🏁 Summary
+
+✅ Authentication System
+✅ Real Image Support (Camera & Gallery)
+✅ Interactive Charts with MPAndroidChart
+✅ Table Management with Floor Layout
+✅ Order Modifications & History
+✅ Multi-language (English, Spanish, French)
+✅ Offline Functionality
+✅ Room Database with Hilt & Compose
+
+Smart Restaurant Manager brings a modern UI, real-time analytics, and complete offline capabilities to restaurant management —
+ready for real-world deployment. 🚀

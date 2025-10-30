@@ -25,7 +25,7 @@ fun CustomerDashboardScreen(
     Box(
         modifier = Modifier.fillMaxSize()
     ) {
-        // 🌆 Professional Background Image (Online)
+
         AsyncImage(
             model = "https://images.unsplash.com/photo-1522336572468-97b06e8ef143?auto=format&fit=crop&w=1200&q=80",
             contentDescription = "Restaurant Background",
@@ -33,7 +33,7 @@ fun CustomerDashboardScreen(
             contentScale = ContentScale.Crop
         )
 
-        // 🌓 Gradient Overlay
+
         Box(
             modifier = Modifier
                 .matchParentSize()
@@ -44,7 +44,7 @@ fun CustomerDashboardScreen(
                 )
         )
 
-        // 🌟 Main Content
+
         Column(
             modifier = Modifier
                 .fillMaxSize()
@@ -80,7 +80,7 @@ fun CustomerDashboardScreen(
 
                     Spacer(modifier = Modifier.height(16.dp))
 
-                    // 🟩 Grid Layout (2x2)
+
                     Column(
                         verticalArrangement = Arrangement.spacedBy(12.dp),
                         horizontalAlignment = Alignment.CenterHorizontally

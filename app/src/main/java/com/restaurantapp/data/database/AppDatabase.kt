@@ -23,7 +23,7 @@ import java.util.*
         SalesData::class,
         MenuItem::class,
         RestaurantTable::class,
-        CartItem::class              // ✅ Added Cart Entity
+        CartItem::class
     ],
     version = 1,
     exportSchema = false
@@ -37,7 +37,7 @@ abstract class AppDatabase : RoomDatabase() {
     abstract fun salesDataDao(): SalesDataDao
     abstract fun menuItemDao(): MenuItemDao
     abstract fun tableDao(): TableDao
-    abstract fun cartDao(): CartDao                  // ✅ Added Cart DAO
+    abstract fun cartDao(): CartDao
 
     companion object {
         @Volatile

@@ -112,7 +112,7 @@ fun MyOrderCard(order: OrderItemUi) {
             modifier = Modifier.padding(12.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
-            // ✅ Food Image
+
             Image(
                 painter = rememberAsyncImagePainter(order.imageUrl),
                 contentDescription = order.name,
@@ -124,7 +124,7 @@ fun MyOrderCard(order: OrderItemUi) {
 
             Spacer(modifier = Modifier.width(12.dp))
 
-            // ✅ Details
+
             Column(
                 modifier = Modifier.weight(1f)
             ) {
@@ -156,7 +156,7 @@ fun MyOrderCard(order: OrderItemUi) {
     }
 }
 
-// ✅ Simple data model for sample orders
+
 data class OrderItemUi(
     val name: String,
     val price: Double,

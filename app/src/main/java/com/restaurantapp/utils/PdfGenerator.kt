@@ -17,10 +17,6 @@ import java.util.*
 
 object PdfGenerator {
 
-    /**
-     * Generate sales PDF inside app external files directory (Downloads-like)
-     * Returns absolute file path string.
-     */
     fun generateSalesReport(context: Context, salesData: List<SalesData>): String {
         val dir = context.getExternalFilesDir("reports") ?: context.filesDir
         if (!dir.exists()) dir.mkdirs()
@@ -30,7 +26,7 @@ object PdfGenerator {
         val pdfDocument = PdfDocument(writer)
         val document = Document(pdfDocument)
 
-        // Header
+
         val title = Paragraph("Restaurant Sales Report")
             .setBold()
             .setFontSize(18f)
@@ -39,7 +35,7 @@ object PdfGenerator {
         document.add(Paragraph("Generated on: ${getCurrentDate()}").setFontSize(11f))
         document.add(Paragraph("\n"))
 
-        // Summary
+
         val totalSales = salesData.sumOf { it.totalSales }
         val totalProfit = salesData.sumOf { it.totalProfit }
 
@@ -55,7 +51,7 @@ object PdfGenerator {
         document.add(summaryTable)
         document.add(Paragraph("\n"))
 
-        // Table body
+
         val table = Table(UnitValue.createPercentArray(floatArrayOf(3f, 2f, 2f))).useAllAvailableWidth()
         table.addHeaderCell(Cell().add(Paragraph("Date").setBold()))
         table.addHeaderCell(Cell().add(Paragraph("Total Sales").setBold()))

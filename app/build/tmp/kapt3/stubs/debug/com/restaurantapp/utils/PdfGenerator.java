@@ -24,10 +24,6 @@ public final class PdfGenerator {
         super();
     }
     
-    /**
-     * Generate sales PDF inside app external files directory (Downloads-like)
-     * Returns absolute file path string.
-     */
     @org.jetbrains.annotations.NotNull
     public final java.lang.String generateSalesReport(@org.jetbrains.annotations.NotNull
     android.content.Context context, @org.jetbrains.annotations.NotNull

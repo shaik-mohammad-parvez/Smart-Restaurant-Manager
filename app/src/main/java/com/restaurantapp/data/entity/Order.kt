@@ -10,11 +10,11 @@ import com.restaurantapp.data.Converters
 data class Order(
     @PrimaryKey(autoGenerate = true)
     val id: Int = 0,
-    val date: Long = System.currentTimeMillis(), // timestamp
+    val date: Long = System.currentTimeMillis(),
     val customerName: String? = null,
-    val status: String = "Pending", // Pending, InProgress, Completed, Cancelled
+    val status: String = "Pending",
     val totalAmount: Double = 0.0,
-    val tableNumber: Int = 1, // default value to prevent missing parameter
-    val items: List<OrderItem> = emptyList(), // safe default to avoid build errors
+    val tableNumber: Int = 1,
+    val items: List<OrderItem> = emptyList(),
     val notes: String? = null
 )

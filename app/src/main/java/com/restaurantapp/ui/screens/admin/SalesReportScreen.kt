@@ -74,7 +74,7 @@ fun SalesReportScreen(
                 .padding(16.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            // 🔹 Title
+
             Text(
                 text = "Sales Analytics",
                 fontSize = 24.sp,
@@ -84,7 +84,7 @@ fun SalesReportScreen(
 
             Spacer(modifier = Modifier.height(20.dp))
 
-            // 🔹 Summary Cards
+
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.spacedBy(12.dp)
@@ -107,7 +107,7 @@ fun SalesReportScreen(
 
             Spacer(modifier = Modifier.height(24.dp))
 
-            // 🔹 Charts Section
+
             Text(
                 text = "Sales Trend",
                 fontSize = 18.sp,
@@ -130,7 +130,7 @@ fun SalesReportScreen(
 
             Spacer(modifier = Modifier.height(32.dp))
 
-            // 🔹 Download PDF Button
+
             Button(
                 onClick = {
                     if (ContextCompat.checkSelfPermission(

@@ -84,13 +84,13 @@ class MenuViewModel @Inject constructor(
         }
     }
 
-    // ✅ NEW FUNCTION — FIXES THE ERROR
+
     fun addToCart(item: MenuItem) {
         viewModelScope.launch {
             try {
                 // If your repository already supports cart, call it like below:
                 repository.addToCart(item)
-                println("✅ Added to cart: ${item.name}")
+                println("Added to cart: ${item.name}")
             } catch (e: Exception) {
                 e.printStackTrace()
             }

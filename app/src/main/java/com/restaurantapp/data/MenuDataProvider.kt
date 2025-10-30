@@ -6,7 +6,7 @@ object MenuDataProvider {
 
     val menuItems = listOf(
 
-        // ⭐ Starters
+
         MenuItem(
             name = "Chicken Tikka",
             description = "Tender chicken grilled in tandoor with Indian spices",
@@ -26,7 +26,7 @@ object MenuDataProvider {
             isAvailable = true
         ),
 
-        // 🍛 Main Course
+
         MenuItem(
             name = "Butter Chicken",
             description = "Creamy tomato curry with soft chicken pieces",
@@ -46,7 +46,7 @@ object MenuDataProvider {
             isAvailable = true
         ),
 
-        // 🥪 Snacks
+
         MenuItem(
             name = "Grilled Sandwich",
             description = "Crunchy grilled sandwich with cheese & veggies",
@@ -66,7 +66,7 @@ object MenuDataProvider {
             isAvailable = true
         ),
 
-        // 🍹 Drinks
+
         MenuItem(
             name = "Cold Coffee",
             description = "Chilled coffee blended with rich cream",
@@ -86,7 +86,7 @@ object MenuDataProvider {
             isAvailable = true
         ),
 
-        // 🍰 Desserts
+
         MenuItem(
             name = "Gulab Jamun",
             description = "Soft sweet milk dumplings in sugar syrup",

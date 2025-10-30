@@ -31,17 +31,17 @@ fun AdminDashboardScreen(
         modifier = Modifier
             .fillMaxSize()
     ) {
-        // ✅ Background image
+
         AsyncImage(
             model = "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1200&q=60",
             contentDescription = null,
             contentScale = ContentScale.Crop,
             modifier = Modifier
                 .fillMaxSize()
-                .blur(5.dp) // soft blur for depth
+                .blur(5.dp)
         )
 
-        // 🔹 Overlay for readability
+
         Box(
             modifier = Modifier
                 .fillMaxSize()
@@ -54,7 +54,7 @@ fun AdminDashboardScreen(
                 .padding(16.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            // 🔹 Header
+
             Text(
                 text = "Admin Dashboard",
                 color = Color.White,
@@ -63,7 +63,7 @@ fun AdminDashboardScreen(
                 modifier = Modifier.padding(vertical = 24.dp)
             )
 
-            // 🔹 Dashboard Grid (2x2 layout)
+
             val dashboardItems = listOf(
                 "Manage Tables" to Routes.TABLE_LIST,
                 "Manage Menu" to Routes.MANAGE_MENU,
@@ -86,7 +86,7 @@ fun AdminDashboardScreen(
                 }
             }
 
-            // 🔹 Logout Button
+
             Button(
                 onClick = onLogout,
                 modifier = Modifier
@@ -105,7 +105,7 @@ fun AdminDashboardScreen(
     }
 }
 
-// 🔹 Card Tile Style
+
 @Composable
 fun DashboardCard(title: String, onClick: () -> Unit) {
     Card(

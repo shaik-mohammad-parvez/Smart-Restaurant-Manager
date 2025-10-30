@@ -38,7 +38,7 @@ class SalesViewModel @Inject constructor(
         }
     }
 
-    // The UI calls with timestamps (Long). Convert to "yyyy-MM-dd" strings before DAO query.
+
     fun loadSalesByDateRange(startMillis: Long, endMillis: Long) {
         viewModelScope.launch {
             val format = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())

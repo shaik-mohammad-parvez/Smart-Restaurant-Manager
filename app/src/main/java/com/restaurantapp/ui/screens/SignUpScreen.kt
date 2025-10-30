@@ -41,7 +41,7 @@ fun SignUpScreen(
 
     val errorMessage by authViewModel.errorMessage.collectAsState()
 
-    // Background with gradient like LoginScreen
+
     Box(
         modifier = Modifier
             .fillMaxSize()
@@ -74,7 +74,7 @@ fun SignUpScreen(
                     modifier = Modifier.padding(bottom = 16.dp)
                 )
 
-                // Input Fields
+
                 CustomTextField(
                     label = "Full Name",
                     value = fullName,

@@ -57,10 +57,6 @@ public final class CartViewModel extends androidx.lifecycle.ViewModel {
         return 0.0;
     }
     
-    /**
-     * Places an order. customerName and customerEmail are provided by the UI
-     * notes is optional. After success the cart is cleared.
-     */
     public final void placeOrder(@org.jetbrains.annotations.NotNull
     java.lang.String customerName, @org.jetbrains.annotations.NotNull
     java.lang.String customerEmail, @org.jetbrains.annotations.Nullable

@@ -75,7 +75,7 @@ fun ManageMenuScreen(
                     .fillMaxSize()
             ) {
 
-                // 🔍 Search Bar
+
                 OutlinedTextField(
                     value = searchText,
                     onValueChange = {
@@ -93,7 +93,7 @@ fun ManageMenuScreen(
 
                 Spacer(modifier = Modifier.height(16.dp))
 
-                // 🍕 Menu Items in Grid (2x2)
+
                 LazyVerticalGrid(
                     columns = GridCells.Fixed(2),
                     verticalArrangement = Arrangement.spacedBy(12.dp),
@@ -131,7 +131,7 @@ fun AdminMenuItemCard(
         shape = RoundedCornerShape(16.dp)
     ) {
         Column {
-            // 🖼️ Food Image
+
             Image(
                 painter = rememberAsyncImagePainter(
                     model = item.imageUrl ?: "https://images.unsplash.com/photo-1600891963935-92d85d41b5e5?w=600"
@@ -145,7 +145,7 @@ fun AdminMenuItemCard(
 
             Spacer(modifier = Modifier.height(8.dp))
 
-            // 🍽️ Details
+
             Column(modifier = Modifier.padding(horizontal = 12.dp)) {
                 Text(
                     text = item.name,
@@ -170,7 +170,7 @@ fun AdminMenuItemCard(
 
             Spacer(modifier = Modifier.height(6.dp))
 
-            // ⚙️ Actions
+
             Row(
                 modifier = Modifier
                     .fillMaxWidth()

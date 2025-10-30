@@ -42,7 +42,7 @@ fun LoginScreen(
     val errorMessage by authViewModel.errorMessage.collectAsState()
     val currentUser by authViewModel.currentUser.collectAsState()
 
-    // ✅ Navigate based on user role
+
     LaunchedEffect(currentUser) {
         currentUser?.let { user ->
             if (user.role == "Admin") {
@@ -57,13 +57,13 @@ fun LoginScreen(
         }
     }
 
-    // 🔹 Background image + gradient overlay
+
     Box(
         modifier = Modifier
             .fillMaxSize()
             .background(Color.Black)
     ) {
-        // Online background image
+
         Image(
             painter = rememberAsyncImagePainter(
                 "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1000&q=80"
@@ -74,7 +74,7 @@ fun LoginScreen(
             alpha = 0.35f // darker for readability
         )
 
-        // Dark gradient overlay
+
         Box(
             modifier = Modifier
                 .matchParentSize()
@@ -85,7 +85,7 @@ fun LoginScreen(
                 )
         )
 
-        // 🔹 Main content
+
         Column(
             modifier = Modifier
                 .fillMaxWidth()
@@ -93,7 +93,7 @@ fun LoginScreen(
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Center
         ) {
-            // App Title
+
             Text(
                 text = "Restaurant App",
                 fontSize = 32.sp,
@@ -102,7 +102,7 @@ fun LoginScreen(
                 modifier = Modifier.padding(bottom = 32.dp)
             )
 
-            // Login Card
+
             Card(
                 modifier = Modifier
                     .fillMaxWidth()
@@ -123,7 +123,7 @@ fun LoginScreen(
                         textAlign = TextAlign.Center
                     )
 
-                    // Email Field
+
                     OutlinedTextField(
                         value = email,
                         onValueChange = { email = it },
@@ -139,7 +139,7 @@ fun LoginScreen(
                         keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Email)
                     )
 
-                    // Password Field
+
                     OutlinedTextField(
                         value = password,
                         onValueChange = { password = it },
@@ -165,12 +165,12 @@ fun LoginScreen(
                         )
                     )
 
-                    // Error message
+
                     errorMessage?.let {
                         Text(text = it, color = Color.Red, fontSize = 14.sp)
                     }
 
-                    // Login Button
+
                     Button(
                         onClick = { authViewModel.signIn(email, password) },
                         modifier = Modifier
@@ -185,7 +185,7 @@ fun LoginScreen(
                         Text("Login", fontSize = 18.sp, fontWeight = FontWeight.Bold)
                     }
 
-                    // Signup Text
+
                     Row(
                         modifier = Modifier.fillMaxWidth(),
                         horizontalArrangement = Arrangement.Center

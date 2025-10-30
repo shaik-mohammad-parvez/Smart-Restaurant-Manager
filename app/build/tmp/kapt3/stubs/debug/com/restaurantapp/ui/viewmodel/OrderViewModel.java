@@ -38,22 +38,13 @@ public final class OrderViewModel extends androidx.lifecycle.ViewModel {
         return null;
     }
     
-    /**
-     * Load all orders and their respective items
-     */
     public final void loadOrders() {
     }
     
-    /**
-     * Update order status (e.g., Completed / Cancelled)
-     */
     public final void updateOrderStatus(int orderId, @org.jetbrains.annotations.NotNull
     java.lang.String newStatus) {
     }
     
-    /**
-     * Delete an order completely
-     */
     public final void deleteOrder(@org.jetbrains.annotations.NotNull
     com.restaurantapp.data.entity.Order order) {
     }

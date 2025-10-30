@@ -31,7 +31,7 @@ fun MenuItemCard(
             modifier = Modifier.padding(12.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
-            // ✅ Food Image
+
             Image(
                 painter = rememberAsyncImagePainter(
                     model = item.imageUrl.ifEmpty { "https://via.placeholder.com/150" }
@@ -45,7 +45,7 @@ fun MenuItemCard(
 
             Spacer(modifier = Modifier.width(12.dp))
 
-            // ✅ Food Info
+
             Column(modifier = Modifier.weight(1f)) {
                 Text(text = item.name, fontWeight = FontWeight.Bold)
                 Text(text = item.category, color = Color.Gray, fontSize = MaterialTheme.typography.bodySmall.fontSize)
@@ -56,7 +56,7 @@ fun MenuItemCard(
                 )
             }
 
-            // ✅ Add Button
+
             Button(onClick = onAddClick) {
                 Text("Add")
             }

@@ -17,11 +17,11 @@ class OrderViewModel @Inject constructor(
     private val repository: RestaurantRepository
 ) : ViewModel() {
 
-    // All orders list
+
     private val _orders = MutableStateFlow<List<Order>>(emptyList())
     val orders: StateFlow<List<Order>> = _orders.asStateFlow()
 
-    // Map of orderId -> list of items
+
     private val _orderItems = MutableStateFlow<Map<Int, List<OrderItem>>>(emptyMap())
     val orderItems: StateFlow<Map<Int, List<OrderItem>>> = _orderItems.asStateFlow()
 
@@ -29,15 +29,12 @@ class OrderViewModel @Inject constructor(
         loadOrders()
     }
 
-    /**
-     * Load all orders and their respective items
-     */
     fun loadOrders() {
         viewModelScope.launch {
             repository.getAllOrders().collect { orderList ->
                 _orders.value = orderList
 
-                // Load items for each order
+
                 val itemsMap = mutableMapOf<Int, List<OrderItem>>()
                 for (order in orderList) {
                     repository.getOrderItemsForOrder(order.id).collect { items ->
@@ -49,23 +46,17 @@ class OrderViewModel @Inject constructor(
         }
     }
 
-    /**
-     * Update order status (e.g., Completed / Cancelled)
-     */
     fun updateOrderStatus(orderId: Int, newStatus: String) {
         viewModelScope.launch {
             val currentOrder = _orders.value.find { it.id == orderId }
             if (currentOrder != null) {
                 val updatedOrder = currentOrder.copy(status = newStatus)
                 repository.updateOrder(updatedOrder)
-                loadOrders() // refresh after update
+                loadOrders()
             }
         }
     }
 
-    /**
-     * Delete an order completely
-     */
     fun deleteOrder(order: Order) {
         viewModelScope.launch {
             repository.deleteOrder(order)

@@ -18,7 +18,7 @@ fun RestaurantNavigation(
     currentUser: User?,
     authViewModel: AuthViewModel = hiltViewModel()
 ) {
-    // If user is not logged in, start from splash
+
     val startDestination = if (!isAuthenticated) {
         Routes.SPLASH
     } else {
@@ -27,12 +27,12 @@ fun RestaurantNavigation(
 
     NavHost(navController = navController, startDestination = startDestination) {
 
-        // ---------------- SPLASH ----------------
+
         composable(Routes.SPLASH) {
             SplashScreen(navController = navController)
         }
 
-        // ---------------- AUTH ----------------
+
         composable(Routes.LOGIN) {
             LoginScreen(navController, authViewModel)
         }
@@ -40,7 +40,7 @@ fun RestaurantNavigation(
             SignUpScreen(navController, authViewModel)
         }
 
-        // ---------------- DASHBOARDS ----------------
+
         composable(Routes.ADMIN_DASHBOARD) {
             AdminDashboardScreen(
                 navController = navController,
@@ -61,7 +61,7 @@ fun RestaurantNavigation(
             )
         }
 
-        // ---------------- CUSTOMER FEATURES ----------------
+
         composable(Routes.VIEW_MENU) {
             ViewMenuScreen(navController = navController)
         }
@@ -70,7 +70,7 @@ fun RestaurantNavigation(
             MyOrdersScreen(navController = navController)
         }
 
-        // ---------------- ADMIN - TABLE MANAGEMENT ----------------
+
         composable(Routes.TABLE_LIST) {
             TableListScreen(navController = navController)
         }
@@ -84,7 +84,7 @@ fun RestaurantNavigation(
             EditTableScreen(navController = navController, tableId = id)
         }
 
-        // ---------------- ADMIN - MENU MANAGEMENT ----------------
+
         composable(Routes.MANAGE_MENU) {
             ManageMenuScreen(navController = navController)
         }
@@ -98,7 +98,7 @@ fun RestaurantNavigation(
             EditMenuItemScreen(navController = navController, menuId = id)
         }
 
-        // ---------------- ADMIN - ORDERS & SALES ----------------
+
         composable(Routes.MANAGE_ORDERS) {
             ManageOrdersScreen(navController = navController)
         }

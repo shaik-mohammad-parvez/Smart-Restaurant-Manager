@@ -67,7 +67,7 @@ fun ViewMenuScreen(
                     .fillMaxSize()
                     .padding(12.dp)
             ) {
-                // 🔍 Search Field
+
                 OutlinedTextField(
                     value = searchText,
                     onValueChange = {
@@ -85,7 +85,7 @@ fun ViewMenuScreen(
                     )
                 )
 
-                // 🍴 Menu Grid 2x2
+
                 LazyVerticalGrid(
                     columns = GridCells.Fixed(2),
                     contentPadding = PaddingValues(8.dp),

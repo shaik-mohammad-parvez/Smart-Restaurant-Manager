@@ -15,10 +15,10 @@ class RestaurantRepository @Inject constructor(
     private val orderDao: OrderDao,
     private val orderItemDao: OrderItemDao,
     private val salesDataDao: SalesDataDao,
-    private val cartDao: CartDao // ✅ Make sure you have a CartDao
+    private val cartDao: CartDao
 ) {
 
-    // ---------------- USERS ----------------
+
     suspend fun authenticateUser(email: String, password: String): User? =
         userDao.authenticateUser(email, password)
 
@@ -28,13 +28,13 @@ class RestaurantRepository @Inject constructor(
     fun getAllUsers(): Flow<List<User>> = userDao.getAllUsers()
     suspend fun getUserCount(): Int = userDao.getUserCount()
 
-    // ---------------- TABLES ----------------
+
     fun getAllTables(): Flow<List<RestaurantTable>> = tableDao.getAllTables()
     suspend fun insertTable(table: RestaurantTable) = tableDao.insertTable(table)
     suspend fun updateTable(table: RestaurantTable) = tableDao.updateTable(table)
     suspend fun deleteTable(table: RestaurantTable) = tableDao.deleteTable(table)
 
-    // ---------------- MENU ITEMS ----------------
+
     fun getAllMenuItems(): Flow<List<MenuItem>> = menuItemDao.getAllMenuItems()
 
     fun searchMenuItems(query: String): Flow<List<MenuItem>> =
@@ -45,7 +45,7 @@ class RestaurantRepository @Inject constructor(
     suspend fun deleteMenuItem(item: MenuItem) = menuItemDao.delete(item)
     suspend fun getMenuItemById(id: Int): MenuItem? = menuItemDao.getMenuItemById(id)
 
-    // ---------------- ORDERS ----------------
+
     fun getAllOrders(): Flow<List<Order>> = orderDao.getAllOrders()
     fun getOrdersByStatus(status: String): Flow<List<Order>> = orderDao.getOrdersByStatus(status)
     suspend fun getOrderById(orderId: Int): Order? = orderDao.getOrderById(orderId)
@@ -53,13 +53,13 @@ class RestaurantRepository @Inject constructor(
     suspend fun updateOrder(order: Order) = orderDao.updateOrder(order)
     suspend fun deleteOrder(order: Order) = orderDao.deleteOrder(order)
 
-    // ---------------- ORDER ITEMS ----------------
+
     fun getOrderItemsForOrder(orderId: Int): Flow<List<OrderItem>> =
         orderItemDao.getOrderItemsByOrderId(orderId)
 
     suspend fun insertOrderItem(item: OrderItem) = orderItemDao.insertOrderItem(item)
 
-    // ---------------- SALES ----------------
+
     fun getAllSalesData(): Flow<List<SalesData>> = salesDataDao.getAllSalesData()
 
     fun getSalesDataByDateRange(startDate: String, endDate: String): Flow<List<SalesData>> =
@@ -77,7 +77,7 @@ class RestaurantRepository @Inject constructor(
         return list.sumOf { it.totalProfit }
     }
 
-    // ---------------- PLACE ORDER (NEW) ----------------
+
     suspend fun placeOrder(order: Order, items: List<OrderItem>): Long {
         val orderId = insertOrder(order) // Insert order and get generated ID
         items.forEach { item ->
@@ -86,7 +86,7 @@ class RestaurantRepository @Inject constructor(
         return orderId
     }
 
-    // ---------------- CART SUPPORT (NEW) ----------------
+
     suspend fun addToCart(item: MenuItem) {
         val cartItem = CartItem(
             menuItemId = item.id,

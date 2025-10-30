@@ -62,10 +62,7 @@ class CartViewModel @Inject constructor(
         return _cartItems.value.sumOf { it.menuItem.price * it.quantity }
     }
 
-    /**
-     * Places an order. customerName and customerEmail are provided by the UI
-     * notes is optional. After success the cart is cleared.
-     */
+
     fun placeOrder(customerName: String, customerEmail: String, notes: String? = null, onResult: (success: Boolean, orderId: Long?) -> Unit) {
         if (_cartItems.value.isEmpty()) {
             onResult(false, null)
@@ -87,7 +84,7 @@ class CartViewModel @Inject constructor(
 
                 val items = _cartItems.value.map { cartItem ->
                     OrderItem(
-                        orderId = 0, // will be replaced by repository.placeOrder
+                        orderId = 0,
                         name = cartItem.menuItem.name,
                         quantity = cartItem.quantity,
                         price = cartItem.menuItem.price

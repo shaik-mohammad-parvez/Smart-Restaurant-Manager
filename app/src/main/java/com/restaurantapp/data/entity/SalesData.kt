@@ -7,7 +7,7 @@ import androidx.room.PrimaryKey
 data class SalesData(
     @PrimaryKey(autoGenerate = true)
     val id: Int = 0,
-    val date: String, // format "yyyy-MM-dd"
+    val date: String,
     val totalSales: Double = 0.0,
     val totalProfit: Double = 0.0
 )

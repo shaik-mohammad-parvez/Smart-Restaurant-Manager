@@ -39,11 +39,11 @@ object DatabaseModule {
     @Provides
     fun provideTableDao(db: AppDatabase): TableDao = db.tableDao()
 
-    // ✅ Provide CartDao
+
     @Provides
     fun provideCartDao(db: AppDatabase): CartDao = db.cartDao()
 
-    // ✅ Provide RestaurantRepository with CartDao included
+
     @Provides
     @Singleton
     fun provideRepository(

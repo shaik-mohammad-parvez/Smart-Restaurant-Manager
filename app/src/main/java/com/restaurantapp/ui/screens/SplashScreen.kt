@@ -27,18 +27,18 @@ fun SplashScreen(navController: NavController) {
     var finishedTyping by remember { mutableStateOf(false) }
     var visible by remember { mutableStateOf(false) }
 
-    // Fade-out animation
+
     val alpha by animateFloatAsState(
         targetValue = if (visible) 1f else 0f,
         animationSpec = tween(durationMillis = 1000),
         label = "fadeAlpha"
     )
 
-    // Typing animation
+
     LaunchedEffect(Unit) {
         for (i in appName.indices) {
             displayedText = appName.substring(0, i + 1)
-            delay(120) // typing speed per letter
+            delay(120)
         }
         delay(1000)
         finishedTyping = true
@@ -54,7 +54,7 @@ fun SplashScreen(navController: NavController) {
         modifier = Modifier.fillMaxSize(),
         contentAlignment = Alignment.Center
     ) {
-        // Background restaurant image
+
         Image(
             painter = rememberAsyncImagePainter("https://images.unsplash.com/photo-1555396273-367ea4eb4db5"),
             contentDescription = "Restaurant Background",
@@ -62,7 +62,7 @@ fun SplashScreen(navController: NavController) {
             contentScale = ContentScale.Crop
         )
 
-        // Dark overlay for contrast
+
         Box(
             modifier = Modifier
                 .fillMaxSize()

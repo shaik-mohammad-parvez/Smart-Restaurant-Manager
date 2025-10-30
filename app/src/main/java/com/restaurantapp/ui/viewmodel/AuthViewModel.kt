@@ -28,7 +28,7 @@ class AuthViewModel @Inject constructor(
     fun signIn(email: String, password: String) {
         viewModelScope.launch {
             try {
-                // ✅ Hardcoded Admin Login
+
                 if (email.trim() == "admin@gmail.com" && password == "admin123") {
                     _currentUser.value = User(
                         email = email,
@@ -42,7 +42,7 @@ class AuthViewModel @Inject constructor(
                     return@launch
                 }
 
-                // ✅ Normal Customer Login
+
                 val user = repository.authenticateUser(email, password)
                 if (user != null) {
                     _currentUser.value = user.copy(role = "Customer")
@@ -71,7 +71,7 @@ class AuthViewModel @Inject constructor(
                     fullName = fullName,
                     password = password,
                     phoneNumber = phoneNumber,
-                    role = "Customer" // ✅ Signup always creates Customer
+                    role = "Customer"
                 )
                 repository.insertUser(user)
                 _currentUser.value = user

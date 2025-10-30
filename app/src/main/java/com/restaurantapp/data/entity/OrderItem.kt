@@ -6,8 +6,8 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "order_items")
 data class OrderItem(
     @PrimaryKey(autoGenerate = true) val id: Int = 0,
-    val orderId: Int,              // FK to Order.id
-    val name: String,              // item name (no menu entity needed)
+    val orderId: Int,
+    val name: String,
     val quantity: Int = 1,
     val price: Double = 0.0
 )

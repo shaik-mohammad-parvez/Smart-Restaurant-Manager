@@ -108,7 +108,7 @@ fun OrderCard(order: Order, onStatusChange: (String) -> Unit) {
                 horizontalArrangement = Arrangement.SpaceBetween,
                 modifier = Modifier.fillMaxWidth()
             ) {
-                // ✅ Complete Button
+
                 Button(
                     onClick = { onStatusChange("Completed") },
                     colors = ButtonDefaults.buttonColors(
@@ -124,7 +124,7 @@ fun OrderCard(order: Order, onStatusChange: (String) -> Unit) {
 
                 Spacer(modifier = Modifier.width(12.dp))
 
-                // ❌ Cancel Button
+
                 Button(
                     onClick = { onStatusChange("Cancelled") },
                     colors = ButtonDefaults.buttonColors(

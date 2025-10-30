@@ -87,6 +87,7 @@ implementation("com.github.PhilJay:MPAndroidChart:v3.1.0")
   <img src="AdminDashboard.jpeg" alt="Admin Dashboard" width="30%" style="border-radius:12px; margin-right:10px;"/>
   <img src="Menu.jpeg" alt="Menu Screen" width="30%" style="border-radius:12px;"/>
 </p>
+
 📱 App Walkthrough
 1️⃣ Authentication System
 

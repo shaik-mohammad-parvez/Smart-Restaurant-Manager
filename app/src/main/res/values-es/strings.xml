@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">App de Restaurante</string>
+    
+    <!-- Authentication -->
+    <string name="sign_in">Registrarse</string>
+    <string name="login">Iniciar Sesión</string>
+    <string name="email">Correo Electrónico</string>
+    <string name="password">Contraseña</string>
+    <string name="confirm_password">Confirmar Contraseña</string>
+    <string name="full_name">Nombre Completo</string>
+    <string name="phone_number">Número de Teléfono</string>
+    <string name="sign_up">Registrarse</string>
+    <string name="already_have_account">¿Ya tienes una cuenta?</string>
+    <string name="dont_have_account">¿No tienes una cuenta?</string>
+    <string name="welcome_back">Bienvenido de Nuevo</string>
+    <string name="create_account">Crear Cuenta</string>
+    
+    <!-- Navigation -->
+    <string name="dashboard">Panel de Control</string>
+    <string name="order_list">Lista de Pedidos</string>
+    <string name="order_detail">Detalle del Pedido</string>
+    <string name="table_management">Gestión de Mesas</string>
+    <string name="sales_statistic">Estadísticas de Ventas</string>
+    
+    <!-- Order Management -->
+    <string name="customer_name">Nombre del Cliente</string>
+    <string name="select_table">Seleccionar Mesa</string>
+    <string name="items">Artículos</string>
+    <string name="order_summary">Resumen del Pedido</string>
+    <string name="subtotal">Subtotal</string>
+    <string name="tax">Impuesto (10%)</string>
+    <string name="process_payment">Procesar Pago</string>
+    <string name="process_transaction">Procesar Transacción</string>
+    <string name="food">Comida</string>
+    <string name="beverage">Bebida</string>
+    <string name="select_menu">Seleccionar Menú</string>
+    <string name="dine_in">Comer Aquí</string>
+    <string name="take_away">Para Llevar</string>
+    <string name="ready_to_serve">Listo para Servir</string>
+    <string name="on_progress">En Progreso</string>
+    <string name="completed">Completado</string>
+    
+    <!-- Dashboard -->
+    <string name="total_profit">Ganancia total</string>
+    <string name="average_sales">Ventas promedio</string>
+    <string name="food_sales">Ventas de comida</string>
+    <string name="beverage_sales">Ventas de bebidas</string>
+    
+    <!-- Table Management -->
+    <string name="add_table">Agregar Mesa</string>
+    <string name="table_number">Número de Mesa</string>
+    <string name="capacity">Capacidad</string>
+    <string name="location">Ubicación</string>
+    <string name="main_hall">Salón Principal</string>
+    <string name="patio">Patio</string>
+    <string name="vip">VIP</string>
+    <string name="private_room">Sala Privada</string>
+    <string name="available">Disponible</string>
+    <string name="occupied">Ocupada</string>
+    <string name="reserved">Reservada</string>
+    <string name="cleaning">Limpieza</string>
+    <string name="table_status_summary">Resumen del Estado de Mesas</string>
+    
+    <!-- Order Modifications -->
+    <string name="order_modifications">Modificaciones del Pedido</string>
+    <string name="common_modifications">Modificaciones Comunes</string>
+    <string name="modifications">Modificaciones</string>
+    <string name="special_requests">Solicitudes Especiales</string>
+    <string name="modifications_hint">ej., Sin cebolla, salsa extra</string>
+    <string name="special_requests_hint">Cualquier instrucción especial para la cocina</string>
+    
+    <!-- Common -->
+    <string name="save">Guardar</string>
+    <string name="cancel">Cancelar</string>
+    <string name="add">Agregar</string>
+    <string name="edit">Editar</string>
+    <string name="delete">Eliminar</string>
+    <string name="back">Atrás</string>
+    <string name="search">Buscar</string>
+    <string name="menu">Menú</string>
+    <string name="profile">Perfil</string>
+    <string name="settings">Configuración</string>
+    <string name="logout">Cerrar Sesión</string>
+    
+    <!-- Time Periods -->
+    <string name="one_day">1D</string>
+    <string name="this_week">SW</string>
+    <string name="one_month">1M</string>
+    <string name="one_year">1A</string>
+    
+    <!-- Common Modifications -->
+    <string name="no_onions">Sin Cebolla</string>
+    <string name="extra_sauce">Salsa Extra</string>
+    <string name="no_spice">Sin Picante</string>
+    <string name="extra_spice">Extra Picante</string>
+    <string name="no_cheese">Sin Queso</string>
+    <string name="extra_cheese">Queso Extra</string>
+    <string name="well_done">Bien Cocido</string>
+    <string name="medium_rare">Término Medio</string>
+    <string name="no_salt">Sin Sal</string>
+    <string name="extra_salt">Sal Extra</string>
+    <string name="no_sugar">Sin Azúcar</string>
+    <string name="extra_sugar">Azúcar Extra</string>
+</resources>

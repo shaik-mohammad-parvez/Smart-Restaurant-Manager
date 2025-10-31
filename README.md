@@ -94,6 +94,10 @@ implementation("com.github.PhilJay:MPAndroidChart:v3.1.0")
   <img src="./Menu.jpeg" alt="Menu Screen" width="30%" style="border-radius:12px;"/>
 </p>
 
+🎬 **Demo Video**
+
+🎥 [Watch Demo Video](https://github.com/shaik-mohammad-parvez/Smart-Restaurant-Manager/blob/main/Smart_Restaurant_Manager_Demo.mp4)
+
 ---
 
 ## 📱 App Walkthrough

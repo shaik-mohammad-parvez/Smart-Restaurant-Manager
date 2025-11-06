@@ -20,7 +20,7 @@ public abstract interface SalesDataDao {
     @org.jetbrains.annotations.NotNull
     public abstract kotlinx.coroutines.flow.Flow<java.util.List<com.restaurantapp.data.entity.SalesData>> getAllSalesData();
     
-    @androidx.room.Query(value = "SELECT * FROM sales_data WHERE date BETWEEN :startDate AND :endDate ORDER BY id DESC")
+    @androidx.room.Query(value = "SELECT * FROM sales_data WHERE date BETWEEN :startDate AND :endDate ORDER BY date ASC")
     @org.jetbrains.annotations.NotNull
     public abstract kotlinx.coroutines.flow.Flow<java.util.List<com.restaurantapp.data.entity.SalesData>> getSalesDataByDateRange(@org.jetbrains.annotations.NotNull
     java.lang.String startDate, @org.jetbrains.annotations.NotNull

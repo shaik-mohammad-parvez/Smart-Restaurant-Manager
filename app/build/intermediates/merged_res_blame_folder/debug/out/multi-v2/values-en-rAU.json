@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.restaurantapp-mergeDebugResources-67:/values-en-rAU/values-en-rAU.xml",
+            "outputFile": "com.restaurantapp-mergeDebugResources-75:/values-en-rAU/values-en-rAU.xml",
             "map": [
                 {
                     "source": "C:\\Users\\salman\\.gradle\\caches\\transforms-3\\6f3502fe0277fda1ba973abf97a6ba5e\\transformed\\ui-release\\res\\values-en-rAU\\values-en-rAU.xml",

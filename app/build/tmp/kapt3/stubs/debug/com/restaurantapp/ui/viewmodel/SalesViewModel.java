@@ -9,7 +9,7 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 import javax.inject.Inject;
 
-@kotlin.Metadata(mv = {1, 9, 0}, k = 1, xi = 48, d1 = {"\u0000@\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0006\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0010\t\n\u0002\b\u0004\b\u0007\u0018\u00002\u00020\u0001B\u000f\b\u0007\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u00a2\u0006\u0002\u0010\u0004J\u0006\u0010\u0014\u001a\u00020\u0015J\u0016\u0010\u0016\u001a\u00020\u00152\u0006\u0010\u0017\u001a\u00020\u00182\u0006\u0010\u0019\u001a\u00020\u0018J\u0016\u0010\u001a\u001a\u00020\u00152\u0006\u0010\u0017\u001a\u00020\u00182\u0006\u0010\u0019\u001a\u00020\u0018J\u0016\u0010\u001b\u001a\u00020\u00152\u0006\u0010\u0017\u001a\u00020\u00182\u0006\u0010\u0019\u001a\u00020\u0018R\u001a\u0010\u0005\u001a\u000e\u0012\n\u0012\b\u0012\u0004\u0012\u00020\b0\u00070\u0006X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0014\u0010\t\u001a\b\u0012\u0004\u0012\u00020\n0\u0006X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0014\u0010\u000b\u001a\b\u0012\u0004\u0012\u00020\n0\u0006X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0002\u001a\u00020\u0003X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u001d\u0010\f\u001a\u000e\u0012\n\u0012\b\u0012\u0004\u0012\u00020\b0\u00070\r\u00a2\u0006\b\n\u0000\u001a\u0004\b\u000e\u0010\u000fR\u0017\u0010\u0010\u001a\b\u0012\u0004\u0012\u00020\n0\r\u00a2\u0006\b\n\u0000\u001a\u0004\b\u0011\u0010\u000fR\u0017\u0010\u0012\u001a\b\u0012\u0004\u0012\u00020\n0\r\u00a2\u0006\b\n\u0000\u001a\u0004\b\u0013\u0010\u000f\u00a8\u0006\u001c"}, d2 = {"Lcom/restaurantapp/ui/viewmodel/SalesViewModel;", "Landroidx/lifecycle/ViewModel;", "repository", "Lcom/restaurantapp/data/repository/RestaurantRepository;", "(Lcom/restaurantapp/data/repository/RestaurantRepository;)V", "_salesList", "Lkotlinx/coroutines/flow/MutableStateFlow;", "", "Lcom/restaurantapp/data/entity/SalesData;", "_totalProfit", "", "_totalSales", "salesList", "Lkotlinx/coroutines/flow/StateFlow;", "getSalesList", "()Lkotlinx/coroutines/flow/StateFlow;", "totalProfit", "getTotalProfit", "totalSales", "getTotalSales", "loadAllSales", "", "loadSalesByDateRange", "startMillis", "", "endMillis", "loadTotalProfit", "loadTotalSales", "app_debug"})
+@kotlin.Metadata(mv = {1, 9, 0}, k = 1, xi = 48, d1 = {"\u0000P\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0000\n\u0002\u0010\u0006\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\t\n\u0002\u0018\u0002\n\u0002\u0010\t\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\b\u0007\u0018\u00002\u00020\u0001B\u000f\b\u0007\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u00a2\u0006\u0002\u0010\u0004J\u001c\u0010\u001a\u001a\u000e\u0012\u0004\u0012\u00020\u001c\u0012\u0004\u0012\u00020\u001c0\u001b2\u0006\u0010\u001d\u001a\u00020\nH\u0002J\u0006\u0010\u001e\u001a\u00020\u001fJ\u000e\u0010 \u001a\u00020\u001f2\u0006\u0010\u001d\u001a\u00020\nR\u001a\u0010\u0005\u001a\u000e\u0012\n\u0012\b\u0012\u0004\u0012\u00020\b0\u00070\u0006X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0014\u0010\t\u001a\b\u0012\u0004\u0012\u00020\n0\u0006X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0014\u0010\u000b\u001a\b\u0012\u0004\u0012\u00020\f0\u0006X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0014\u0010\r\u001a\b\u0012\u0004\u0012\u00020\f0\u0006X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u000e\u001a\u00020\u000fX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0002\u001a\u00020\u0003X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u001d\u0010\u0010\u001a\u000e\u0012\n\u0012\b\u0012\u0004\u0012\u00020\b0\u00070\u0011\u00a2\u0006\b\n\u0000\u001a\u0004\b\u0012\u0010\u0013R\u0017\u0010\u0014\u001a\b\u0012\u0004\u0012\u00020\n0\u0011\u00a2\u0006\b\n\u0000\u001a\u0004\b\u0015\u0010\u0013R\u0017\u0010\u0016\u001a\b\u0012\u0004\u0012\u00020\f0\u0011\u00a2\u0006\b\n\u0000\u001a\u0004\b\u0017\u0010\u0013R\u0017\u0010\u0018\u001a\b\u0012\u0004\u0012\u00020\f0\u0011\u00a2\u0006\b\n\u0000\u001a\u0004\b\u0019\u0010\u0013\u00a8\u0006!"}, d2 = {"Lcom/restaurantapp/ui/viewmodel/SalesViewModel;", "Landroidx/lifecycle/ViewModel;", "repository", "Lcom/restaurantapp/data/repository/RestaurantRepository;", "(Lcom/restaurantapp/data/repository/RestaurantRepository;)V", "_salesList", "Lkotlinx/coroutines/flow/MutableStateFlow;", "", "Lcom/restaurantapp/data/entity/SalesData;", "_selectedRange", "", "_totalProfit", "", "_totalSales", "dateFormat", "Ljava/text/SimpleDateFormat;", "salesList", "Lkotlinx/coroutines/flow/StateFlow;", "getSalesList", "()Lkotlinx/coroutines/flow/StateFlow;", "selectedRange", "getSelectedRange", "totalProfit", "getTotalProfit", "totalSales", "getTotalSales", "computeRangeMillis", "Lkotlin/Pair;", "", "rangeIndex", "loadAllSales", "", "loadForRange", "app_debug"})
 @dagger.hilt.android.lifecycle.HiltViewModel
 public final class SalesViewModel extends androidx.lifecycle.ViewModel {
     @org.jetbrains.annotations.NotNull
@@ -26,6 +26,12 @@ public final class SalesViewModel extends androidx.lifecycle.ViewModel {
     private final kotlinx.coroutines.flow.MutableStateFlow<java.lang.Double> _totalProfit = null;
     @org.jetbrains.annotations.NotNull
     private final kotlinx.coroutines.flow.StateFlow<java.lang.Double> totalProfit = null;
+    @org.jetbrains.annotations.NotNull
+    private final kotlinx.coroutines.flow.MutableStateFlow<java.lang.Integer> _selectedRange = null;
+    @org.jetbrains.annotations.NotNull
+    private final kotlinx.coroutines.flow.StateFlow<java.lang.Integer> selectedRange = null;
+    @org.jetbrains.annotations.NotNull
+    private final java.text.SimpleDateFormat dateFormat = null;
     
     @javax.inject.Inject
     public SalesViewModel(@org.jetbrains.annotations.NotNull
@@ -48,15 +54,28 @@ public final class SalesViewModel extends androidx.lifecycle.ViewModel {
         return null;
     }
     
+    @org.jetbrains.annotations.NotNull
+    public final kotlinx.coroutines.flow.StateFlow<java.lang.Integer> getSelectedRange() {
+        return null;
+    }
+    
+    /**
+     * 🔸 Load sales, profit and total stats for selected range.
+     * Range index: 0 -> 1D | 1 -> 1W | 2 -> 1M | 3 -> 1Y
+     */
+    public final void loadForRange(int rangeIndex) {
+    }
+    
+    /**
+     * 🔸 Compute range time (in millis) based on user selection.
+     */
+    private final kotlin.Pair<java.lang.Long, java.lang.Long> computeRangeMillis(int rangeIndex) {
+        return null;
+    }
+    
+    /**
+     * 🔸 Load all records (optional, for admin dashboard or reports)
+     */
     public final void loadAllSales() {
-    }
-    
-    public final void loadSalesByDateRange(long startMillis, long endMillis) {
-    }
-    
-    public final void loadTotalSales(long startMillis, long endMillis) {
-    }
-    
-    public final void loadTotalProfit(long startMillis, long endMillis) {
     }
 }

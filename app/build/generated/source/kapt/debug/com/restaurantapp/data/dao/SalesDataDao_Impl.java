@@ -122,7 +122,7 @@ public final class SalesDataDao_Impl implements SalesDataDao {
   @Override
   public Flow<List<SalesData>> getSalesDataByDateRange(final String startDate,
       final String endDate) {
-    final String _sql = "SELECT * FROM sales_data WHERE date BETWEEN ? AND ? ORDER BY id DESC";
+    final String _sql = "SELECT * FROM sales_data WHERE date BETWEEN ? AND ? ORDER BY date ASC";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 2);
     int _argIndex = 1;
     if (startDate == null) {

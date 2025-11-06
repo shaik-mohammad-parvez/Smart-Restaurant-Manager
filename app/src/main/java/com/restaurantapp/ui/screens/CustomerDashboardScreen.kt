@@ -33,17 +33,15 @@ fun CustomerDashboardScreen(
             contentScale = ContentScale.Crop
         )
 
-
         Box(
             modifier = Modifier
                 .matchParentSize()
                 .background(
                     Brush.verticalGradient(
-                        colors = listOf(Color(0xCC000000), Color(0xCC2B0000))
+                        colors = listOf(Color(0x66000000), Color(0x662B0000))
                     )
                 )
         )
-
 
         Column(
             modifier = Modifier
@@ -59,11 +57,11 @@ fun CustomerDashboardScreen(
                 color = Color.White
             )
 
-            Spacer(modifier = Modifier.height(20.dp))
+            Spacer(modifier = Modifier.height(16.dp))
 
             Card(
                 modifier = Modifier.fillMaxWidth(0.9f),
-                colors = CardDefaults.cardColors(containerColor = Color(0xFF1E1E1E).copy(alpha = 0.9f)),
+                colors = CardDefaults.cardColors(containerColor = Color.White.copy(alpha = 0.95f)),
                 elevation = CardDefaults.cardElevation(8.dp),
                 shape = RoundedCornerShape(16.dp)
             ) {
@@ -75,11 +73,10 @@ fun CustomerDashboardScreen(
                         text = "Your Dashboard",
                         fontSize = 18.sp,
                         fontWeight = FontWeight.Medium,
-                        color = Color.Gray
+                        color = Color(0xFF111827)
                     )
 
                     Spacer(modifier = Modifier.height(16.dp))
-
 
                     Column(
                         verticalArrangement = Arrangement.spacedBy(12.dp),
@@ -91,13 +88,13 @@ fun CustomerDashboardScreen(
                         ) {
                             DashboardButton(
                                 text = "View Menu",
-                                color = Color.Black,
+                                color = MaterialTheme.colorScheme.primary,
                                 onClick = { navController.navigate(Routes.VIEW_MENU) },
                                 modifier = Modifier.weight(1f)
                             )
                             DashboardButton(
                                 text = "My Orders",
-                                color = Color.Black,
+                                color = MaterialTheme.colorScheme.primary,
                                 onClick = { navController.navigate(Routes.MY_ORDERS) },
                                 modifier = Modifier.weight(1f)
                             )
@@ -124,28 +121,5 @@ fun CustomerDashboardScreen(
                 }
             }
         }
-    }
-}
-
-@Composable
-fun DashboardButton(
-    text: String,
-    color: Color,
-    onClick: () -> Unit,
-    modifier: Modifier = Modifier
-) {
-    Button(
-        onClick = onClick,
-        modifier = modifier
-            .height(55.dp),
-        colors = ButtonDefaults.buttonColors(containerColor = color),
-        shape = RoundedCornerShape(50.dp)
-    ) {
-        Text(
-            text = text,
-            color = Color.White,
-            fontSize = 16.sp,
-            fontWeight = FontWeight.SemiBold
-        )
     }
 }

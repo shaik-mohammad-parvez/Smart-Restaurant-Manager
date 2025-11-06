@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.restaurantapp-mergeDebugResources-67:/values-en-rCA/values-en-rCA.xml",
+            "outputFile": "com.restaurantapp-mergeDebugResources-75:/values-en-rCA/values-en-rCA.xml",
             "map": [
                 {
                     "source": "C:\\Users\\salman\\.gradle\\caches\\transforms-3\\018cceb1a040486ce0182012e5596856\\transformed\\appcompat-1.6.1\\res\\values-en-rCA\\values-en-rCA.xml",

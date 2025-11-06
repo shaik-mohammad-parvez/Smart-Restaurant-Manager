@@ -11,6 +11,10 @@ import com.restaurantapp.navigation.RestaurantNavigation
 import com.restaurantapp.ui.theme.RestaurantAppTheme
 import com.restaurantapp.ui.viewmodel.AuthViewModel
 import dagger.hilt.android.AndroidEntryPoint
+import androidx.compose.ui.Modifier
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.ui.graphics.Color
+import com.restaurantapp.ui.theme.ScreenBackground
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
@@ -22,7 +26,10 @@ class MainActivity : ComponentActivity() {
 
         setContent {
             RestaurantAppTheme {
-                Surface {
+                Surface(
+                    modifier = Modifier.fillMaxSize(),
+                    color = ScreenBackground
+                ) {
                     val navController = rememberNavController()
                     val isAuthenticated = authViewModel.isAuthenticated.collectAsState().value
                     val currentUser = authViewModel.currentUser.collectAsState().value

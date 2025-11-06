@@ -57,7 +57,7 @@ fun OrderMenuScreen(navController: NavHostController) {
             .padding(16.dp),
         contentAlignment = Alignment.Center
     ) {
-        // White background card (top-rounded only)
+
         Card(
             shape = RoundedCornerShape(topStart = 32.dp, topEnd = 32.dp),
             modifier = Modifier.fillMaxSize(),
@@ -66,7 +66,6 @@ fun OrderMenuScreen(navController: NavHostController) {
         ) {
             Box(modifier = Modifier.fillMaxSize()) {
 
-                // Black header
                 Surface(
                     modifier = Modifier
                         .fillMaxWidth()
@@ -110,7 +109,7 @@ fun OrderMenuScreen(navController: NavHostController) {
                 ) {
                     item {
                         Column {
-                            // Header row
+
                             Row(
                                 modifier = Modifier
                                     .fillMaxWidth()
@@ -167,7 +166,6 @@ fun OrderMenuScreen(navController: NavHostController) {
 
                             Spacer(modifier = Modifier.height(8.dp))
 
-                            // Order cards overlapping
                             LazyRow(
                                 modifier = Modifier
                                     .padding(start = 20.dp)
@@ -185,7 +183,6 @@ fun OrderMenuScreen(navController: NavHostController) {
 
                             Spacer(modifier = Modifier.height(28.dp))
 
-                            // Segmented buttons
                             var selected by remember { mutableStateOf("Food") }
                             Row(
                                 modifier = Modifier
@@ -226,7 +223,6 @@ fun OrderMenuScreen(navController: NavHostController) {
                         }
                     }
 
-                    // Product grid
                     item {
                         val products = listOf(
                             Product(
@@ -264,7 +260,6 @@ fun OrderMenuScreen(navController: NavHostController) {
                     }
                 }
 
-                // Bottom black pill (no white background overlap)
                 Box(
                     modifier = Modifier
                         .fillMaxSize()
@@ -324,7 +319,6 @@ fun OrderMenuScreen(navController: NavHostController) {
     }
 }
 
-// -------------- Components --------------
 
 @Composable
 fun CircleIconButton(icon: ImageVector, onClick: () -> Unit) {

@@ -44,7 +44,7 @@ fun AdminDashboardScreen(navController: androidx.navigation.NavHostController) {
         DashboardItem(
             "Order Menu",
             "https://cdn-icons-png.flaticon.com/512/1046/1046784.png",
-            Routes.ORDER_MENU // 👈 new card
+            Routes.ORDER_MENU
         ),
         DashboardItem(
             "Sales Report",

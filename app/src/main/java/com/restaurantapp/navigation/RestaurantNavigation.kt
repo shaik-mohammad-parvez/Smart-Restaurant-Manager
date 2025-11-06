@@ -41,12 +41,12 @@ fun RestaurantNavigation(
 
     NavHost(navController = navController, startDestination = startDestination) {
 
-        // 🔹 Authentication
+        // Authentication
         composable(Routes.SPLASH) { SplashScreen(navController = navController) }
         composable(Routes.LOGIN) { LoginScreen(navController, authViewModel) }
         composable(Routes.SIGNUP) { SignUpScreen(navController, authViewModel) }
 
-        // 🔹 Admin
+        // Admin
         composable(Routes.ADMIN_DASHBOARD) {
             AdminDashboardScreen(navController = navController)
         }
@@ -59,7 +59,7 @@ fun RestaurantNavigation(
         }
 
 
-        // 🔹 Customer
+        // Customer
         composable(Routes.CUSTOMER_DASHBOARD) {
             CustomerDashboardScreen(
                 navController = navController,
@@ -70,11 +70,11 @@ fun RestaurantNavigation(
             )
         }
 
-        // 🔹 Common Screens
+        // Common Screens
         composable(Routes.VIEW_MENU) { ViewMenuScreen(navController = navController) }
         composable(Routes.MY_ORDERS) { MyOrdersScreen(navController = navController) }
 
-        // 🔹 Table Management
+        // Table Management
         composable(Routes.TABLE_LIST) { TableListScreen(navController = navController) }
         composable(Routes.ADD_TABLE) { AddTableScreen(navController = navController) }
         composable("${Routes.EDIT_TABLE}/{tableId}") { backStack ->
@@ -82,7 +82,7 @@ fun RestaurantNavigation(
             EditTableScreen(navController = navController, tableId = id)
         }
 
-        // 🔹 Menu Management
+        // Menu Management
         composable(Routes.MANAGE_MENU) { ManageMenuScreen(navController = navController) }
         composable(Routes.ADD_MENU_ITEM) { AddMenuItemScreen(navController = navController) }
         composable("${Routes.EDIT_MENU_ITEM}/{menuId}") { backStack ->
@@ -90,7 +90,7 @@ fun RestaurantNavigation(
             EditMenuItemScreen(navController = navController, menuId = id)
         }
 
-        // 🔹 Orders
+        // Orders
         composable(Routes.MANAGE_ORDERS) { ManageOrdersScreen(navController = navController) }
         composable("order_detail/{orderId}") { backStackEntry ->
             val orderId = backStackEntry.arguments?.getString("orderId")?.toIntOrNull() ?: 0
@@ -104,7 +104,7 @@ fun RestaurantNavigation(
         }
 
 
-        // 🔹 Modern Order Menu Screen
+        // Modern Order Menu Screen
         composable(Routes.ORDER_MENU) {
             OrderMenuScreen(navController = navController)
         }

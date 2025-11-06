@@ -31,7 +31,6 @@ class OrderViewModel @Inject constructor(
         loadOrders()
     }
 
-    // ✅ Fetch all orders + related items
     fun loadOrders() {
         viewModelScope.launch {
             repository.getAllOrders().collect { orderList ->
@@ -48,7 +47,6 @@ class OrderViewModel @Inject constructor(
         }
     }
 
-    // ✅ Fetch a single order by ID
     fun loadOrderById(orderId: Int) {
         viewModelScope.launch {
             repository.getOrderById(orderId)?.let { order ->
@@ -58,7 +56,6 @@ class OrderViewModel @Inject constructor(
         }
     }
 
-    // ✅ Update an order (used in OrderDetailScreen)
     fun updateOrder(order: Order) {
         viewModelScope.launch {
             repository.updateOrder(order)
@@ -67,7 +64,6 @@ class OrderViewModel @Inject constructor(
         }
     }
 
-    // ✅ Change order status (e.g., Completed / Pending)
     fun updateOrderStatus(orderId: Int, newStatus: String) {
         viewModelScope.launch {
             val currentOrder = _orders.value.find { it.id == orderId }
@@ -79,7 +75,6 @@ class OrderViewModel @Inject constructor(
         }
     }
 
-    // ✅ Delete order
     fun deleteOrder(order: Order) {
         viewModelScope.launch {
             repository.deleteOrder(order)

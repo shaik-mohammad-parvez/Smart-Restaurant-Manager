@@ -59,7 +59,7 @@ fun ManageOrdersScreen(
                     verticalArrangement = Arrangement.spacedBy(14.dp)
                 ) {
                     items(orders) { order ->
-                        // ✅ Only navigate if id is valid
+
                         val validId = order.id ?: 0
                         OrderCard(order = order) {
                             if (validId > 0) {
@@ -81,7 +81,7 @@ fun OrderCard(order: Order, onClick: () -> Unit) {
     ElevatedCard(
         modifier = Modifier
             .fillMaxWidth()
-            .clickable { onClick() }, // ✅ Click works fine
+            .clickable { onClick() },
         shape = RoundedCornerShape(16.dp),
         colors = CardDefaults.elevatedCardColors(containerColor = Color.White),
         elevation = CardDefaults.elevatedCardElevation(defaultElevation = 4.dp)

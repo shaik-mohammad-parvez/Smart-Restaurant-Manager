@@ -18,7 +18,6 @@ class SalesViewModel @Inject constructor(
     private val repository: RestaurantRepository
 ) : ViewModel() {
 
-    // 🔹 State Flows for Live Compose Updates
     private val _salesList = MutableStateFlow<List<SalesData>>(emptyList())
     val salesList: StateFlow<List<SalesData>> = _salesList
 
@@ -34,14 +33,10 @@ class SalesViewModel @Inject constructor(
     private val dateFormat = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
 
     init {
-        // Load initial range (1 Month default)
+
         loadForRange(2)
     }
 
-    /**
-     * 🔸 Load sales, profit and total stats for selected range.
-     * Range index: 0 -> 1D | 1 -> 1W | 2 -> 1M | 3 -> 1Y
-     */
     fun loadForRange(rangeIndex: Int) {
         _selectedRange.value = rangeIndex
         val (startMillis, endMillis) = computeRangeMillis(rangeIndex)
@@ -50,7 +45,7 @@ class SalesViewModel @Inject constructor(
             val start = dateFormat.format(Date(startMillis))
             val end = dateFormat.format(Date(endMillis))
 
-            // Parallel data loading for performance
+
             launch {
                 repository.getSalesDataByDateRange(start, end).collect { data ->
                     _salesList.value = data
@@ -75,9 +70,6 @@ class SalesViewModel @Inject constructor(
         }
     }
 
-    /**
-     * 🔸 Compute range time (in millis) based on user selection.
-     */
     private fun computeRangeMillis(rangeIndex: Int): Pair<Long, Long> {
         val cal = Calendar.getInstance()
         val end = cal.timeInMillis
@@ -92,9 +84,6 @@ class SalesViewModel @Inject constructor(
         return Pair(max(0L, start), max(start + 1, end))
     }
 
-    /**
-     * 🔸 Load all records (optional, for admin dashboard or reports)
-     */
     fun loadAllSales() {
         viewModelScope.launch {
             repository.getAllSalesData().collect { data ->

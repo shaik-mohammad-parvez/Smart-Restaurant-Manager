@@ -29,9 +29,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
 
-// --------------------------------------
-// COLORS
-// --------------------------------------
 private val OuterBackground = Color(0xFFF0F2F4)
 private val SurfaceWhite = Color.White
 private val MainText = Color(0xFF0B0B0B)
@@ -40,19 +37,12 @@ private val MutedText = Color(0xFF9EA6AC)
 private val AccentTeal = Color(0xFF0E9AA7)
 private val DangerRed = Color(0xFFE74C3C)
 
-// --------------------------------------
-// DATA MODEL (using online image URL)
-// --------------------------------------
 data class SampleOrderItem(
     val title: String,
     val price: Int,
     val qty: Int,
     val imageUrl: String
 )
-
-// --------------------------------------
-// MAIN SCREEN
-// --------------------------------------
 @SuppressLint("UnrememberedMutableState")
 @Composable
 fun OrderDetailScreen(
@@ -146,7 +136,6 @@ fun OrderDetailScreen(
                         SegmentedSwitch(isDineIn = isDineIn, onSelect = { isDineIn = it })
                     }
 
-                    // ✅ Customer Info
                     item {
                         Spacer(modifier = Modifier.height(8.dp))
                         Text("Customer Information", fontWeight = FontWeight.SemiBold, color = MainText)
@@ -181,7 +170,6 @@ fun OrderDetailScreen(
                         Spacer(modifier = Modifier.height(8.dp))
                     }
 
-                    // ✅ Items
                     item {
                         Text("Items", fontSize = 16.sp, fontWeight = FontWeight.SemiBold, color = MainText)
                     }
@@ -199,13 +187,13 @@ fun OrderDetailScreen(
                         )
                     }
 
-                    // ✅ Summary
+                    // Summary
                     item {
                         OrderSummary(subtotal, tax)
                     }
                 }
 
-                // ✅ Bottom Button
+                // Bottom Button
                 Button(
                     onClick = { onProcessPayment(subtotal, tax) },
                     modifier = Modifier
@@ -222,9 +210,6 @@ fun OrderDetailScreen(
     }
 }
 
-// --------------------------------------
-// Segmented Switch
-// --------------------------------------
 @Composable
 fun SegmentedSwitch(isDineIn: Boolean, onSelect: (Boolean) -> Unit) {
     Row(
@@ -264,9 +249,6 @@ fun SegmentedSwitch(isDineIn: Boolean, onSelect: (Boolean) -> Unit) {
     }
 }
 
-// --------------------------------------
-// ✅ ITEM ROW WITH COIL + SWIPE DELETE
-// --------------------------------------
 @Composable
 fun OrderItemRow(
     item: SampleOrderItem,
@@ -407,10 +389,6 @@ fun OrderItemRow(
         }
     }
 }
-
-// --------------------------------------
-// ORDER SUMMARY
-// --------------------------------------
 @Composable
 fun OrderSummary(subtotal: Double, tax: Double) {
     Column(

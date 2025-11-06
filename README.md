@@ -88,11 +88,13 @@ implementation("com.github.PhilJay:MPAndroidChart:v3.1.0")
 
 ## 📱 App Preview
 
+
 <p align="center">
   <img src="./Splash%20Screen.jpeg" alt="Splash Screen" width="30%" style="border-radius:12px; margin-right:10px;"/>
-  <img src="./AdminDashboard.jpeg" alt="Admin Dashboard" width="30%" style="border-radius:12px; margin-right:10px;"/>
-  <img src="./Menu.jpeg" alt="Menu Screen" width="30%" style="border-radius:12px;"/>
+  <img src="./Admin%20Dashboard.jpeg" alt="Admin Dashboard" width="30%" style="border-radius:12px; margin-right:10px;"/>
+  <img src="./OrderDetail%20Screen.jpeg" alt="Order Detail Screen" width="30%" style="border-radius:12px;"/>
 </p>
+
 
 🎬 **Demo Video**
 

@@ -98,7 +98,8 @@ implementation("com.github.PhilJay:MPAndroidChart:v3.1.0")
 
 🎬 **Demo Video**
 
-🎥 [Watch Demo Video](https://github.com/shaik-mohammad-parvez/Smart-Restaurant-Manager/blob/main/Smart_Restaurant_Manager_Demo.mp4)
+🎥 [Watch Demo Video](https://github.com/shaik-mohammad-parvez/Smart-Restaurant-Manager/blob/main/Smart_Restaurant_Manager.mp4)
+
 
 ---
 
